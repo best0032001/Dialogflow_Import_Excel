@@ -35,7 +35,16 @@ namespace DiaImport003
                 Console.WriteLine("Excel is not installed!!");
                 return;
             }
-            Workbook excelBook = excelApp.Workbooks.Open(@excelPath);
+            Workbook excelBook = null;
+            try
+            {
+                excelBook = excelApp.Workbooks.Open(@excelPath);
+            }
+            catch
+            {
+                Console.WriteLine("Excel is not installed!!");
+            }
+          
             _Worksheet excelSheet = excelBook.Sheets[1];
             Range excelRange = excelSheet.UsedRange;
 
