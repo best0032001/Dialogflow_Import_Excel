@@ -1,0 +1,16 @@
+C:\Users\best0032001.ITSC\source\repos\DiaImport003\DiaImport003\bin\Release\DiaImport003.exe.config
+C:\Users\best0032001.ITSC\source\repos\DiaImport003\DiaImport003\bin\Release\DiaImport003.exe
+C:\Users\best0032001.ITSC\source\repos\DiaImport003\DiaImport003\bin\Release\DiaImport003.pdb
+C:\Users\best0032001.ITSC\source\repos\DiaImport003\DiaImport003\bin\Release\Microsoft.CSharp.dll
+C:\Users\best0032001.ITSC\source\repos\DiaImport003\DiaImport003\bin\Release\Newtonsoft.Json.dll
+C:\Users\best0032001.ITSC\source\repos\DiaImport003\DiaImport003\bin\Release\System.Configuration.dll
+C:\Users\best0032001.ITSC\source\repos\DiaImport003\DiaImport003\bin\Release\System.Data.DataSetExtensions.dll
+C:\Users\best0032001.ITSC\source\repos\DiaImport003\DiaImport003\bin\Release\System.dll
+C:\Users\best0032001.ITSC\source\repos\DiaImport003\DiaImport003\bin\Release\System.Net.Http.dll
+C:\Users\best0032001.ITSC\source\repos\DiaImport003\DiaImport003\bin\Release\System.Xml.dll
+C:\Users\best0032001.ITSC\source\repos\DiaImport003\DiaImport003\bin\Release\System.Xml.Linq.dll
+C:\Users\best0032001.ITSC\source\repos\DiaImport003\DiaImport003\bin\Release\Newtonsoft.Json.xml
+C:\Users\best0032001.ITSC\source\repos\DiaImport003\DiaImport003\obj\Release\DiaImport003.csproj.ResolveComReference.cache
+C:\Users\best0032001.ITSC\source\repos\DiaImport003\DiaImport003\obj\Release\DiaImport003.csproj.CoreCompileInputs.cache
+C:\Users\best0032001.ITSC\source\repos\DiaImport003\DiaImport003\obj\Release\DiaImport003.exe
+C:\Users\best0032001.ITSC\source\repos\DiaImport003\DiaImport003\obj\Release\DiaImport003.pdb
