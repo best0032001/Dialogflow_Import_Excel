@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="model\DialogFlowModel.cs" />
     <Compile Include="model\ExcelView.cs" />
+    <Compile Include="model\InentModel.cs" />
     <Compile Include="model\IntentView.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

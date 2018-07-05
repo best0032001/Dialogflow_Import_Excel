@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DiaImport003.model
 {
-    public class DialogFlowModel
+    public class DialogFlowInsertModel
     {
         public List<string> contexts { get; set; }
         public List<object> events { get; set; }

@@ -44,7 +44,7 @@ namespace DiaImport003
             {
                 Console.WriteLine("Excel is not installed!!");
             }
-          
+
             _Worksheet excelSheet = excelBook.Sheets[1];
             Range excelRange = excelSheet.UsedRange;
 
@@ -121,7 +121,7 @@ namespace DiaImport003
                         intentView.response.Add(excelView.Responses);
                     }
                 }
-                DialogFlowModel dialogFlowModel = new DialogFlowModel();
+                DialogFlowInsertModel dialogFlowModel = new DialogFlowInsertModel();
                 dialogFlowModel.contexts = new List<string>();
                 dialogFlowModel.events = new List<object>();
                 dialogFlowModel.fallbackIntent = false;
@@ -173,15 +173,51 @@ namespace DiaImport003
                     client.DefaultRequestHeaders.Add("Authorization", "Bearer " + dialogflowToken);
                     try
                     {
-                        HttpResponseMessage res = await client.PostAsync($"https://api.dialogflow.com/v1/intents?v=20150910", new StringContent(json.ToString(), Encoding.UTF8, "application/json"));
-                        if (res.IsSuccessStatusCode)
+
+                        HttpResponseMessage responseGetInent = await client.GetAsync($"https://api.dialogflow.com/v1/intents?v=20150910");
+                        if (responseGetInent.IsSuccessStatusCode)
                         {
-                            Console.WriteLine("intent " + intentView.name + " succeeded");
+                            HttpContent content = responseGetInent.Content;
+                            string result = await content.ReadAsStringAsync();
+                            List<InentModel> intentList = (List<InentModel>)JsonConvert.DeserializeObject(result, typeof(IList<InentModel>));
+
+                            InentModel inentModel = intentList.Where(T => T.name.Equals(dialogFlowModel.name)).FirstOrDefault();
+                            if (inentModel == null)
+                            {
+                                HttpResponseMessage res = await client.PostAsync($"https://api.dialogflow.com/v1/intents?v=20150910", new StringContent(json.ToString(), Encoding.UTF8, "application/json"));
+                                if (res.IsSuccessStatusCode)
+                                {
+                                    Console.WriteLine("intent " + intentView.name + " insert succeeded");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("intent " + intentView.name + " insert failed");
+                                }
+
+                            }
+                            else
+                            {
+                                HttpResponseMessage res = await client.PutAsync($"https://api.dialogflow.com/v1/intents/" + inentModel.id+ "?v=20150910", new StringContent(json.ToString(), Encoding.UTF8, "application/json"));
+                                if (res.IsSuccessStatusCode)
+                                {
+                                    Console.WriteLine("intent " + intentView.name + " update succeeded");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("intent " + intentView.name + " update failed");
+                                }
+                            }
+                            //==============================
+
+
+
                         }
                         else
                         {
                             Console.WriteLine("intent " + intentView.name + " failed");
                         }
+
+
                     }
                     catch (Exception ex)
                     {

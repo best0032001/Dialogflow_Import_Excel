@@ -14,4 +14,3 @@ C:\Users\best0032001.ITSC\source\repos\DiaImport003\DiaImport003\obj\Release\Dia
 C:\Users\best0032001.ITSC\source\repos\DiaImport003\DiaImport003\obj\Release\DiaImport003.csproj.CoreCompileInputs.cache
 C:\Users\best0032001.ITSC\source\repos\DiaImport003\DiaImport003\obj\Release\DiaImport003.exe
 C:\Users\best0032001.ITSC\source\repos\DiaImport003\DiaImport003\obj\Release\DiaImport003.pdb
-C:\Users\best0032001.ITSC\source\repos\DiaImport003\DiaImport003\obj\Release\DiaImport003.csprojResolveAssemblyReference.cache
